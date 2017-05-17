@@ -1,4 +1,4 @@
-const camelcaseKeys = require('./camelcaseKeys');
+import camelcaseKeys from './camelcaseKeys';
 
 const camelMiddleware = store => next => action => {
   if (typeof action === 'object') {
@@ -9,4 +9,4 @@ const camelMiddleware = store => next => action => {
   }
 }
 
-module.exports = camelMiddleware;
+export default camelMiddleware;

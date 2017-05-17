@@ -1,4 +1,4 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
 const camelcaseKeys = (obj) => {
   let newObject = _.isArray(obj) ? [] : {};
@@ -13,4 +13,4 @@ const camelcaseKeys = (obj) => {
   return newObject;
 };
 
-module.exports = camelcaseKeys;
+export default camelcaseKeys;
