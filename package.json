@@ -7,7 +7,7 @@
     "build": "babel --copy-files --out-dir dist src",
     "commit": "git-cz",
     "prebuild": "rimraf dist",
-    "test": "mocha test/*.test.js --watch"
+    "test": "mocha test/*.test.js --watch --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "babel-cli": "6.24.1",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-stage-2": "6.24.1",
+    "babel-register": "6.24.1",
     "chai": "3.5.0",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",

@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
-const camelcaseKeys = require('../src/camelcaseKeys');
+import { expect } from 'chai';
+import camelcaseKeys from '../src/camelcaseKeys';
 
 describe('camelcaseKeys', () => {
   it('handles simple object', () => {

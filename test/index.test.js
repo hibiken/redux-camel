@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
-const camelMiddleware = require('../src/index');
+import { expect } from 'chai';
+import camelMiddleware from '../src/index';
 
 describe('camelMiddleware', () => {
   it('should work', () => {
