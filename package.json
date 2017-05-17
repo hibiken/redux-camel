@@ -1,0 +1,24 @@
+{
+  "name": "redux-camel",
+  "version": "0.0.0",
+  "description": "Redux middleware to transform action object to use camelCase keys before dispatch",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenny-hibino/redux-camel.git"
+  },
+  "keywords": [
+    "redux",
+    "camelcase",
+    "middleware"
+  ],
+  "author": "Ken Hibino <ken.hibino7@gmail.com> (http://www.kenhibino.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kenny-hibino/redux-camel/issues"
+  },
+  "homepage": "https://github.com/kenny-hibino/redux-camel#readme"
+}
