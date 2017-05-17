@@ -11,7 +11,8 @@
     "commit": "git-cz",
     "prebuild": "rimraf dist",
     "prepublish": "npm run test && npm run build",
-    "test": "mocha test/*.test.js --watch --compilers js:babel-register"
+    "test": "mocha test/*.test.js --compilers js:babel-register",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
