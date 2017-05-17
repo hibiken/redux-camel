@@ -4,7 +4,7 @@
   "description": "Redux middleware to transform action object to use camelCase keys before dispatch",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha test/index.js -w"
+    "test": "mocha test/*.test.js --watch"
   },
   "repository": {
     "type": "git",

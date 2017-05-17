@@ -1,17 +1,4 @@
-const _ = require('lodash');
-
-const camelcaseKeys = (obj) => {
-  let newObject = _.isArray(obj) ? [] : {};
-
-  for (let prop in obj) {
-    if (typeof obj[prop] === 'object' && obj[prop] !== null) {
-      newObject[_.camelCase(prop)] = camelcaseKeys(obj[prop]);
-    } else {
-      newObject[_.camelCase(prop)] = obj[prop];
-    }
-  }
-  return newObject;
-}
+const camelcaseKeys = require('./camelcaseKeys');
 
 const camelMiddleware = store => next => action => {
   if (typeof action === 'object') {
@@ -22,7 +9,4 @@ const camelMiddleware = store => next => action => {
   }
 }
 
-module.exports = {
-  camelcaseKeys,
-  camelMiddleware,
-};
+module.exports = camelMiddleware;
