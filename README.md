@@ -31,8 +31,30 @@ import rootReducer from './reducers/index';
 // Note: this API requires redux@>=3.1.0
 const store = createStore(
   rootReducer,
-  applyMiddleware(camelMiddleware)
+  applyMiddleware(camelMiddleware())
 );
+```
+
+## API
+
+Default export from `redux-camel` is a function that creates a middleware. The function takes an options object. You can configure the middleware to whether always transform the action objects to camelCase keys by setting `global` option (By default, it is set to `true`).
+
+If you want to selectively transform action objects to camelCase keys, you can pass the `global` option set to `false`, and when you call `dispatch`, call it with `camelCase` set to `true` to transform the action object to use camelCase keys.
+
+```js
+/* Example #1 (Global) */
+// Always transform the action objects to camelCase keys
+applyMiddleware(camelMiddleware());
+
+// Then you can dispatch an action
+dispatch({ type: 'FETCH_POSTS_SUCCESS', payload: posts });
+
+/* Example #2 (Selectively camelCase) */
+// Omit global option
+applyMiddleware(camelMiddleware({ global: false }));
+
+// Then you can dispatch an action with camelCase set to true
+dispatch({ type: 'FETCH_POSTS_SUCCESS', payload: posts, camelCase: true });
 ```
 
 ## License
