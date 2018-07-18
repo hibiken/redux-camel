@@ -1,13 +1,13 @@
-import _ from 'lodash';
+import camelCase from 'lodash.camelcase';
 
 const camelcaseKeys = (obj) => {
-  let newObject = _.isArray(obj) ? [] : {};
+  let newObject = Array.isArray(obj) ? [] : {};
 
   for (let prop in obj) {
     if (typeof obj[prop] === 'object' && obj[prop] !== null) {
-      newObject[_.camelCase(prop)] = camelcaseKeys(obj[prop]);
+      newObject[camelCase(prop)] = camelcaseKeys(obj[prop]);
     } else {
-      newObject[_.camelCase(prop)] = obj[prop];
+      newObject[camelCase(prop)] = obj[prop];
     }
   }
   return newObject;
