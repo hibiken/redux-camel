@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/kenny-hibino/redux-camel#readme",
   "dependencies": {
-    "lodash": "4.17.4"
+    "lodash.camelcase": "4.3.0"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
