@@ -55,6 +55,16 @@ applyMiddleware(camelMiddleware({ global: false }));
 
 // Then you can dispatch an action with camelCase set to true
 dispatch({ type: 'FETCH_POSTS_SUCCESS', payload: posts, camelCase: true });
+
+/* Example #3 (Redux Toolkit) */
+// Omit global option
+const store = configureStore({
+  ...
+  middleware: [camelMiddleware({ global: false }), ...getDefaultMiddleware()],
+})
+
+// Then add to the arg object with camelCase set to true
+search({ query: 'some query', camelCase: true });
 ```
 
 ## License
