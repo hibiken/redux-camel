@@ -1,6 +1,6 @@
 {
   "name": "redux-camel",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Redux middleware to transform action object to use camelCase keys before dispatch",
   "main": "dist/index.js",
   "scripts": {
