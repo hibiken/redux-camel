@@ -2,14 +2,16 @@ import camelcaseKeys from './camelcaseKeys';
 
 const defaultOptions = { global: true };
 
-const checkCamelCaseKey = (action) => {
+const checkCamelCaseKey = (action, options) => {
   if (typeof action === 'object') {
-    return !!action.camelCase || !!action.meta.arg.camelCase
+    return (options.global || !!action.camelCase || !!action.meta.arg.camelCase)
+      && action.camelCase !== false
   }
 }
 
 const camelMiddleware = (options = defaultOptions) => store => next => action => {
-  const shouldCamelCaseKeys = options.global || checkCamelCaseKey(action);
+  const shouldCamelCaseKeys =  checkCamelCaseKey(action, options);
+
   if (typeof action === 'object' && shouldCamelCaseKeys) {
     const newAction = camelcaseKeys(action);
     return next(newAction);

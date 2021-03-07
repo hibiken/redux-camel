@@ -49,6 +49,9 @@ applyMiddleware(camelMiddleware());
 // Then you can dispatch an action
 dispatch({ type: 'FETCH_POSTS_SUCCESS', payload: posts });
 
+// Or turn off camelCase keys for specific action by passing camelCase false
+dispatch({ type: 'FETCH_POSTS_SUCCESS', payload: posts, camelCase: false });
+
 /* Example #2 (Selectively camelCase) */
 // Omit global option
 applyMiddleware(camelMiddleware({ global: false }));
