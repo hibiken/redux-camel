@@ -48,7 +48,7 @@
     "mocha": "3.4.1",
     "npm-run-all": "4.0.2",
     "rimraf": "2.6.1",
-    "webpack": "2.5.1"
+    "webpack": "5.74.0"
   },
   "babel": {
     "presets": [
